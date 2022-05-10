@@ -1,12 +1,12 @@
 <template>
-    <div class="main-page_header">
+    <header class="main-page_header">
             <img :src="ecoGreenLogo" alt="EcoGreen">
         <div class="main-page_nav">
             <div class="main-page_loupe"></div>
             <div class="main-page_font-size"></div>
             <div class="main-page_bars" @click="changeValueNavMenu"></div>
         </div>
-    </div>
+    </header>
 
     <div v-if="isOpenNavMenu" class="main-page_navigation">
         <div class="main-page_navigation-login">
@@ -33,17 +33,34 @@
     <div class="main-page_plants">
         <main-page-plants-and-fowers></main-page-plants-and-fowers>
     </div>
+
+    <div class="main-page_care">
+        <main-page-care></main-page-care>
+    </div>
+
+    <div class="main-page_news">
+        <main-page-news></main-page-news>
+    </div>
+
+    <footer class="main-page_footer">
+        <div class="main-page_age"></div>
+        <div class="main-page_description">Our website is intended for informational purposes only and is not an advertisement. ©&nbsp;2018&nbsp;-&nbsp;2021</div>
+    </footer>
 </template>
 
 <script>
 import ecoGreenLogo from '../assets/images/eco-green-logo-header.svg'
 import MainPageRecommended from './MainPageRecommended.vue'
 import MainPagePlantsAndFowers from './MainPagePlantsAndFowers.vue'
+import MainPageCare from './MainPageCare.vue'
+import MainPageNews from './MainPageNews.vue'
 
 export default {
     components: {
         MainPageRecommended,
         MainPagePlantsAndFowers,
+        MainPageCare,
+        MainPageNews,
     },
     data() {
         return {
@@ -84,7 +101,7 @@ export default {
     width: 16px;
     height: 16px;
     margin-right: 28px;
-    background-image: url(../assets/images/magnifying-glass.svg);
+    background-image: url(../assets/icons/magnifying-glass.svg);
     background-repeat: no-repeat;
     background-position: center;
     flex-shrink: 0;
@@ -94,7 +111,7 @@ export default {
     width: 22px;
     height: 16px;
     margin-right: 28px;
-    background-image: url(../assets/images/EN.svg);
+    background-image: url(../assets/icons/EN.svg);
     background-repeat: no-repeat;
     background-position: center;
     flex-shrink: 0;
@@ -104,7 +121,7 @@ export default {
     width: 14px;
     height: 12px;
     margin-right: 20px;
-    background-image: url(../assets/images/bars.svg);
+    background-image: url(../assets/icons/bars.svg);
     background-position: center;
     cursor: pointer;    
     flex-shrink: 0;
@@ -144,7 +161,7 @@ export default {
     height: 20px;
     margin-right: 8px;
     background-position: center;
-    background-image: url(../assets/images/circle-user.svg);
+    background-image: url(../assets/icons/circle-user.svg);
     background-repeat: no-repeat;
 }
 
@@ -158,5 +175,36 @@ export default {
 
 .main-page_hr {
     margin-bottom: 20px;
+}
+
+.main-page_care {
+    margin-bottom: 32px;
+}
+
+.main-page_news {
+    margin-bottom: 24px;
+}
+
+.main-page_footer {
+    background: #111827;
+    color: #6B7280;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -8px;
+}
+
+.main-page_age {
+    width: 48px;
+    height: 48px;
+    background-image: url(../assets/icons/age-restriction.svg);
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-right: 16px;
+}
+
+.main-page_description {
+    font-size: 16px;
+    line-height: 20px;
 }
 </style>

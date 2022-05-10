@@ -19,8 +19,19 @@ export default {
   box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
 a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
 }
 
 #app {
@@ -30,6 +41,8 @@ a {
   color: #2c3e50;
   display: flex;
   flex-direction: column;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .app_wrapper {
@@ -37,4 +50,23 @@ a {
   padding: 0 8px;
   background: #E5E5E5;
 }
+
+.title-category {
+    font-weight: bold;
+    font-size: 18px;
+    color: #111827;
+}
+
+.link-see-all {
+    color: #6BA91A;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.link-see-all:focus,
+.link-see-all:hover {
+    color: #5b9016;
+}
+
+
 </style>

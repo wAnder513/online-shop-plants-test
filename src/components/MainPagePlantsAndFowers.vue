@@ -1,7 +1,7 @@
 <template>
     <div class="plants_title">
-        <div class="plants_category">Plants and flowers</div>
-        <router-link class="plants_all" to="/plants">See all</router-link>
+        <div class="title-category">Plants and flowers</div>
+        <router-link class="link-see-all" to="/plants">See all</router-link>
     </div>
 
     <div class="plants_cards">
@@ -59,33 +59,11 @@
     </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style scoped>
 .plants_title {
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
     margin-bottom: 16px;
-}
-
-.plants_category {
-    font-size: 18px;
-    margin-bottom: 16px;
-}
-
-.plants_all {
-    color: #6BA91A;
-    font-size: 16px;
-}
-
-.plants_all:focus,
-.plants_all:hover {
-    color: #5b9016;
 }
 
 .plants_cards {
@@ -175,7 +153,7 @@ export default {
     width: 13px;
     height: 12px;
     margin-right: 2px;
-    background-image: url(../assets/images/star.svg);
+    background-image: url(../assets/icons/star.svg);
     background-repeat: no-repeat;
 }
 

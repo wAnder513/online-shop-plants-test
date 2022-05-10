@@ -1,5 +1,5 @@
 <template>
-  <h2 class="recommended_title-category">Recommended for you</h2>
+  <h2 class="title-category">Recommended for you</h2>
 
     <div class="recommended_cards-wrapper">
         <div class="recommended_cards">
@@ -30,30 +30,14 @@
     </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style scoped>
-.recommended_title-category {
-    font-size: 18px;
-    margin-bottom: 16px;
-}
-
 .recommended_cards-wrapper {
-    margin: 0 -8px;
     overflow-y: auto;
 }
 
 .recommended_cards {
     display: flex;
-    margin: 0 8px 32px;
-}
-
-.recommended_cards-wrapper::-webkit-scrollbar {
-  display: none;
+    margin-bottom: 32px;
 }
 
 .recommended_card {
@@ -119,5 +103,7 @@ export default {
 .recommended_banner-text {
     font-size: 14px;
     opacity: 0.5;
+    line-height: 20px;
+    margin-bottom: 8px;
 }
 </style>
